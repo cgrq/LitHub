@@ -1,0 +1,160 @@
+@font-face {
+    font-family: 'Mona Sans';
+    src:
+        url('Mona-Sans.woff2') format('woff2 supports variations'),
+        url('Mona-Sans.woff2') format('woff2-variations');
+    font-weight: 200 900;
+    font-stretch: 75% 125%;
+}
+
+.body-container {
+    display: flex;
+    height: 100vh;
+}
+
+.spine-container {
+    position: relative;
+    width: 9%;
+}
+
+.spine {
+    position: absolute;
+    top: 70px;
+    left: 50px;
+}
+
+.main-body {
+    width: 91%;
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+.main-body-top-row {
+    display: flex;
+    padding-top: 60px;
+    justify-content: flex-end;
+    position: relative;
+    height: 350px;
+}
+
+.drone {
+    width: 320px;
+    position: absolute;
+    animation-play-state: running;
+    animation: hover-animation 15s ease-in-out infinite;
+}
+
+@keyframes hover-animation {
+    0% {
+        transform: translateY(0);
+    }
+
+    10% {
+        transform: translateY(0)
+    }
+
+    50% {
+        transform: translateY(20px);
+    }
+
+    60% {
+        transform: translateY(20px)
+    }
+
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+h1,
+.main-title {
+    font-size: 96px !important;
+    line-height: 100px !important;
+    font-weight: 600 !important;
+    overflow-wrap: break-word;
+    word-break: keep-all;
+    margin-bottom: 40px;
+    color: white;
+    font-family: "Mona Sans", "Mona Sans Fallback", -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    font-feature-settings: "ss02" on, "ss01" on;
+
+}
+
+@media (max-width: 1012px) {
+    .main-title {
+        font-size: 96px !important;
+        line-height: 100px !important;
+    }
+}
+
+@media (max-width: 768px) {
+    .main-title {
+        font-size: 72px !important;
+        line-height: 76px !important;
+    }
+}
+
+.main-subtitle {
+    font-size: 32px !important;
+    line-height: 44px !important;
+    color: rgb(139, 148, 158);
+    max-width: 70.33%;
+    font-family: "Mona Sans", "Mona Sans Fallback", -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}
+
+.email-field {
+    display: flex;
+    margin-top:60px;
+    flex-flow: row nowrap;
+    align-items: flex-start;
+}
+
+.email-input {
+    cursor: text;
+    font-weight: 400;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    font-size: 16px;
+    padding-top: 1rem;
+    padding-left: 1rem;
+    width:300px;
+    z-index:100;
+    height:100%;
+    border:1px solid transparent;
+    padding-bottom: 1rem;
+    font-family: "Mona Sans", "Mona Sans Fallback", -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}
+
+.email-button {
+    background: linear-gradient(180deg, rgba(183, 52, 179, 0.15) 0%, rgba(164, 46, 156, 0) 100%), #6e40c9 !important;
+    color: white;
+    font-size: 16px;
+    border:1px solid transparent;
+    padding:1rem;
+    z-index:101;
+    height:100%;
+    cursor: pointer;
+    font-family: "Mona Sans", "Mona Sans Fallback", -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    font-weight: 700;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+
+}
+
+.email-button:hover {
+    text-decoration: none;
+    box-shadow: 0 4px 7px rgba(0, 0, 0, 0.15), 0 100px 80px rgba(255, 255, 255, 0.02), 0 42px 33px rgba(255, 255, 255, 0.024), 0 22px 18px rgba(255, 255, 255, 0.028), 0 12px 10px rgba(255, 255, 255, 0.034), 0 7px 5px rgba(255, 255, 255, 0.04), 0 3px 2px rgba(255, 255, 255, 0.07) !important;
+}
+
+.email-input:focus {
+    border-color: #0969da;
+    outline: none;
+    box-shadow: inset 0 0 0 1px #0969da;
+}
+
+.email-input:focus:not(:focus-visible) {
+    border-color: transparent;
+    border-color: #0969da;
+    outline: none;
+    box-shadow: inset 0 0 0 1px transparent;
+}
