@@ -17,5 +17,6 @@ html{
 }
 .content-container{
     max-width:1300px;
+    min-width:700px;
     margin:0 auto;
 }
